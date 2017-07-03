@@ -9,12 +9,13 @@ fn main()
 	//let wow = b'A';
 	//println!("{}", wow);
 	println!("guess the number!");
+	let mut guess = String::new();
 	let secret_number: u32 = rand::thread_rng().gen_range(1, 101);
 	//println!("the secret number is {}", secret_number);
 	loop
 	{
 		println!("input your guess");
-		let mut guess = String::new();
+		guess.clear();
 		io::stdin().read_line(&mut guess)
 			.expect("failed to read line");
 		let guess: u32 = match guess.trim().parse()//.expect("not a number");
