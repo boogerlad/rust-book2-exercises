@@ -20,8 +20,11 @@ fn main()
 		println!("On the {} day of Christmas", days_gifts[i].0);
 		println!("my true love sent to me:");
 		for j in (1..i + 1).rev()
+		//start from 1 because "partride in a pear tree" is a special case dealt with after the loop
+		//end at i + 1 because first paramter in range is inclusive, second is exclusive. i max value is 11, so j would only go up to 10
+		//rev() literally reverses it(won't muck with inclusive/exclusive, as that was dealt with in the beginning with ..), so 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 => 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1
 		{
-			println!("{} {},", j + 1, days_gifts[j].1);
+			println!("{} {},", j + 1, days_gifts[j].1);//j + 1 because j is just the index(zero based). the actual quantity in the song is 1 more than it 
 		}
 		if i == 0
 		{
