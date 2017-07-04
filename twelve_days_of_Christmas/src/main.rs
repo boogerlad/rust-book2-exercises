@@ -15,7 +15,6 @@ fn main()
 		("eleventh", "pipers piping"),
 		("twelfth", "drummers drumming")
 	];
-	let mut counter = 1;
 	for i in 0..days_gifts.len()
 	{
 		println!("On the {} day of Christmas", days_gifts[i].0);
