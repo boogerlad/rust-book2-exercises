@@ -1,0 +1,6 @@
+[package]
+name = "twelve_days_of_Christmas"
+version = "0.1.0"
+authors = ["boogerlad <boogerlad@gmail.com>"]
+
+[dependencies]
