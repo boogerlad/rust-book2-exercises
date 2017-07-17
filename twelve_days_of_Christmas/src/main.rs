@@ -42,6 +42,6 @@ fn main()
 			}
 			print!("and a ");
 		}
-		println!("{}", days_gifts[0].1);
+		println!("{}.", days_gifts[0].1);
 	}
 }
