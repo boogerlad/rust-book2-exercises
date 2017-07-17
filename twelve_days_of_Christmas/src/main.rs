@@ -34,7 +34,7 @@ fn main()
 				//the internal representation of slices is a pointer to first element and a length
 				//so even though the slice is starting at 1, j first value will be 0(+1)
 				//the source array indicies are not taken into account after slicing so .enumerate() will always start from 0
-				//if the starting value was 4 instead of 1 for example, we would need 1+4
+				//if the starting value was 4 instead of 1 for example, we would need (+4)
 				//slicing essentially returns a new array
 				//array is pointer to first element and a length as well
 				//1+1=2
