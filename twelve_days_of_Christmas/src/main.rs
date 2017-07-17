@@ -26,8 +26,18 @@ fn main()
 		}
 		else
 		{
+			//start from 1 because 0 is partridge in a pear tree and dealt with outside the loop
+			//i + 1 because the second arguement in a slice is exclusive
 			for (j, &(_, gift)) in days_gifts[1..i + 1].iter().enumerate().rev()
 			{
+				//j + 2 because indicies are zero based(+1), and
+				//the internal representation of slices is a pointer to first element and a length
+				//so even though the slice is starting at 1, j first value will be 0(+1)
+				//the source array indicies are not taken into account after slicing so .enumerate() will always start from 0
+				//if the starting value was 4 instead of 1 for example, we would need 1+4
+				//slicing essentially returns a new array
+				//array is pointer to first element and a length as well
+				//1+1=2
 				println!("{} {}", j + 2, gift);
 			}
 			print!("and a ");
