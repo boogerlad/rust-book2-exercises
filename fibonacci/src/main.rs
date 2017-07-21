@@ -9,7 +9,7 @@ fn main()
 		{
 			match val.parse::<u32>()
 			{
-				Ok(val) => println!("{}", fib_iterative(val)),
+				Ok(val) => println!("{}", fib_recursive(val)),
 				Err(_) => println!("not a number")
 			}
 		},
@@ -24,10 +24,11 @@ fn fib_memoization(n: u32) -> u32
 //todo: make a memoization thingy class for subsequent accesses
 fn fib_recursive(n: u32) -> u32
 {
-	if n <= 1 {
-		return n
+	match n
+	{
+		0 | 1 => n,
+		_ => fib_recursive(n - 1) + fib_recursive(n - 2)
 	}
-	fib_recursive(n - 1) + fib_recursive(n - 2)
 }
 
 fn fib_iterative(n: u32) -> u32
