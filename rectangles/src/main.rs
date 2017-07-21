@@ -27,7 +27,7 @@ impl Rectangle
 	{
 		Rectangle
 		{
-			length: length,
+			length,
 			width: length
 		}
 	}
